@@ -1,0 +1,28 @@
+.time-display {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.time-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.time-value {
+  font-size: 1.2rem;
+  color: #212529;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .time-display {
+    padding: 0.8rem;
+  }
+
+  .time-value {
+    font-size: 1rem;
+  }
+}

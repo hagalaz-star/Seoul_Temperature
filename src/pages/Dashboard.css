@@ -1,0 +1,95 @@
+.page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.dashboard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.dashboard-inner {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.overline {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #3b82f6;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: linear-gradient(to right, #60a5fa, #34d399);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  font-weight: 400;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background: white; /* 카드 배경색 변경 */
+
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  /* 요소의 모든 변화에 애니메이션 효과를 적용 */
+  transition: all 0.3s ease;
+  /* 요소 뒤에 있는 모든 콘텐츠에 블러 효과를 적용 */
+  backdrop-filter: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #2563eb;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+}
+
+.card-label {
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: #2563eb;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.card-description {
+  color: #64748b;
+  line-height: 1.5;
+}
