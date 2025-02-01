@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+이 프로젝트는 서울의 기후 데이터를 시각적으로 분석하고 표현하는 대시보드를 제공합니다. React와 TypeScript를 활용한 프론트엔드 구성과 Recharts를 통한 데이터 시각화에 중점을 둡니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+핵심 기능:
+실시간 기후 정보 시각화
+서울의 현재 기온, 최고/최저 기온 표시
+시간대별 기온 변화 트렌드 분석
+강수량, 구름량 등 기본 날씨 데이터 제공
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+기간별 데이터 분석:
 
-## Expanding the ESLint configuration
+일별/주별/월별 기온 변화 추이
+과거 데이터와의 비교 분석
+기간 설정을 통한 맞춤형 데이터 조회
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+직관적인 데이터 시각화:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Recharts를 활용한 인터랙티브 차트
+온도, 강수량 등의 복합 데이터 표현
+사용자 친화적인 인터페이스
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+기술 스택:
+
+Frontend: React, TypeScript
+데이터 시각화: Recharts
+API: Open-Meteo Weather API
+상태관리: React Query
+
+
 ```
