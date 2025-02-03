@@ -44,11 +44,11 @@ src/
 │   │   ├── Footer.tsx
 │   │   └── Footer.css
 │   └── activity/
-│       ├── WeatherActivity.tsx    // 날씨 기반 활동 추천
-│       ├── ActivityLogic.tsx      // 활동 추천 로직
-│       └── weather/
-│           ├── WeatherOptions.tsx // 날씨 옵션 컴포넌트
-│           └── WeatherOptions.css
+│   │     ├── WeatherActivity.tsx    // 날씨 기반 활동 추천
+│   │     ├── ActivityLogic.tsx      // 활동 추천 로직
+│   └── weather/
+│         ├── WeatherOptions.tsx // 날씨 옵션 컴포넌트
+│         └── WeatherOptions.css
 ├── pages/
 │   ├── Dashboard.tsx
 │   ├── Dashboard.css
