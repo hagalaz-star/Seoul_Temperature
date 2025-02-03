@@ -29,41 +29,34 @@ Frontend: React, TypeScript
 API: Open-Meteo Weather API
 상태관리: React Query
 
-
+```
 src/
 ├── api/
 │   └── weather/
-│       └── weatherApi.tsx           // 날씨 API 통신
-│
-├── types/                      
-│   ├── weather.ts                  // 날씨 관련 타입 정의
-│   └── activity.ts                 // 활동 관련 타입 정의
-│
+│       └── weatherApi.tsx         // 날씨 API 통신
+├── types/
+│   ├── weather.ts                 // 날씨 관련 타입 정의
+│   └── activity.ts                // 활동 관련 타입 정의
 ├── components/
 │   ├── charts/
-│   │    └── WeatherChart.tsx       // 날씨 차트 컴포넌트
-│   │ 
+│   │   └── WeatherChart.tsx       // 날씨 차트 컴포넌트
 │   ├── layout/
-│   │    ├── Footer.tsx  
-│   │    └── Footer.css
+│   │   ├── Footer.tsx
+│   │   └── Footer.css
 │   └── activity/
-│   │     ├── WeatherActivity.tsx    // 날씨 기반 활동 추천
-│   │     └── ActivityLogic.tsx      // 활동 추천 로직
-│   │
-│   └── weather/
-│         ├── WeatherOptions.tsx     // 날씨 옵션 컴포넌트
-│         └── WeatherOptions.css
-│
+│       ├── WeatherActivity.tsx    // 날씨 기반 활동 추천
+│       ├── ActivityLogic.tsx      // 활동 추천 로직
+│       └── weather/
+│           ├── WeatherOptions.tsx // 날씨 옵션 컴포넌트
+│           └── WeatherOptions.css
 ├── pages/
 │   ├── Dashboard.tsx
 │   ├── Dashboard.css
 │   ├── SeoulWeather.tsx
 │   └── SeoulWeather.css
-│
 ├── utils/
-│   ├── weatherDataTransformer.tsx  // 날씨 데이터 변환
-│   └── weatherChartRenderer.tsx    // 차트 데이터 렌더링 유틸리티
-│
+│   ├── weatherDataTransformer.tsx // 날씨 데이터 변환
+│   └── weatherChartRenderer.tsx   // 차트 데이터 렌더링 유틸리티
 ├── App.tsx
 ├── App.css
 └── main.tsx
