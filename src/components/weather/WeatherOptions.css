@@ -1,10 +1,9 @@
-/* 체크박스 컨테이너 */
 .weather-options-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
-/* 체크박스 라벨 스타일링 */
+
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -15,11 +14,10 @@
   font-size: 0.9rem;
 }
 
-/* 기본 체크박스 숨기기 */
 .checkbox-label input[type="checkbox"] {
   display: none;
 }
-/* 커스텀 체크박스 */
+
 .checkbox-label .custom-checkbox {
   width: 1.2rem;
   height: 1.2rem;
@@ -32,7 +30,6 @@
   background: white;
 }
 
-/* 체크 표시 */
 .checkbox-label .custom-checkbox::after {
   content: "";
   width: 0.5rem;
@@ -43,13 +40,11 @@
   transition: transform 0.15s ease;
 }
 
-/* 체크된 상태 */
 .checkbox-label input[type="checkbox"]:checked + .custom-checkbox {
   border-color: #2563eb;
   background: #2563eb;
 }
 
-/* 호버 효과 */
 .checkbox-label:hover .custom-checkbox {
   border-color: #2563eb;
 }

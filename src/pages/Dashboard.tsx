@@ -27,11 +27,14 @@ const Dashboard = () => {
 
             <Link to="/climate-analysis" className="card">
               <div className="card-content">
-                <span className="card-label">분석</span>
-                <h3 className="card-title">Climate Analysis</h3>
-                <p className="card-description">기후 변화 패턴과 상세 분석</p>
+                <span className="card-label">활동 가이드</span>
+                <h3 className="card-title">Weather Activity</h3>
+                <p className="card-description">날씨 기반 활동 추천</p>
               </div>
             </Link>
+
+            {/* 테스트 페이지 링크 추가 */}
+            <Link to="/test">테스트 페이지로 이동</Link>
           </div>
         </div>
       </main>

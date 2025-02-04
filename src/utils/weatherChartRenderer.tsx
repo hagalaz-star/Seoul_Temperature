@@ -12,7 +12,7 @@ import {
   Line,
 } from "recharts";
 
-import { ChartDataPoint } from "../../../utils/weatherDataTransformer";
+import { ChartDataPoint } from "./weatherDataTransformer";
 
 interface ChartProps {
   chartData: ChartDataPoint[];
@@ -70,8 +70,13 @@ export const renderTemperatureChart = ({
         orientation="left"
         tick={{ fill: "#94a3b8" }}
         label={{ value: "온도 (°C)", angle: -90, position: "insideLeft" }}
+        tickFormatter={(value: number | string): string =>
+          Math.round(Number(value)).toString()
+        }
       />
-      <Tooltip />
+      <Tooltip
+        formatter={(value: number) => [`${Math.round(value)}°C`, "기온"]}
+      />
       <Legend />
       {timeRange === "hourly" && showCurrentTemp && (
         <Line
@@ -144,10 +149,15 @@ export const renderPrecipitationChart = ({
           position: "insideLeft",
           fill: "#3b82f6",
         }}
-        domain={[0, hasPrecipitation ? "auto" : 0.1]} // 최소 범위 설정
+        domain={[0, 15]} // 최소 범위 설정
         ticks={hasPrecipitation ? undefined : [0]} // 강수량 없을 때 0만 표시
       />
-      <Tooltip />
+      <Tooltip
+        formatter={(value: number) => [
+          `${value.toFixed(1)} mm`,
+          timeRange === "hourly" ? "시간당 강수량" : "일일 강수량",
+        ]}
+      />
       <Legend />
       {showPrecipitation && (
         <Bar
@@ -184,8 +194,13 @@ export const renderTrendChart = ({ chartData, timeRange }: ChartProps) => {
       <YAxis
         tick={{ fill: "#94a3b8" }}
         label={{ value: "기온 (°C)", angle: -90, position: "insideLeft" }}
+        tickFormatter={(value: number | string): string =>
+          Math.round(Number(value)).toString()
+        }
       />
-      <Tooltip />
+      <Tooltip
+        formatter={(value: number) => [`${Math.round(value)}°C`, "기온"]}
+      />
       <Legend />
       <Area
         type="monotone"

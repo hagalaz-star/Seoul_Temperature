@@ -8,7 +8,7 @@ import {
   renderTemperatureChart,
   renderPrecipitationChart,
   renderTrendChart,
-} from "./renderers/weatherChartRenderer";
+} from "../../utils/weatherChartRenderer";
 import NotFoundPage from "../../pages/NotFoundPage";
 
 interface ChartProps extends WeatherDisplayOptions {
